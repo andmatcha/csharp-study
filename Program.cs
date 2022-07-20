@@ -1,13 +1,23 @@
-﻿namespace HelloWorld;
+﻿namespace cs_study;
 
-class Hello {
-    static string greeting = "Hello, world!";
+class getInput
+{
+    static string greeting = "Hello!";
 
     static void Main()
     {
         Console.WriteLine(greeting);
-        Console.Write("Enter your name >");
-        string? name = Console.ReadLine();
-        Console.WriteLine($"Hello, {name}!");
+        Console.Write("Enter something...");
+        string? input = Console.ReadLine();
+
+        var testInstance = new cs_study.Write();
+        if (input != null && input != "")
+        {
+            testInstance.writeSomething(input);
+        }
+        else
+        {
+            Main();
+        }
     }
 }
